@@ -3,6 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firebase: {
+    apiKey: "AIzaSyDCjicu3gVqaMPa7HTQQ4xcxviS1PJ0fA0",
+    authDomain: "fantasy-premier-leagues.firebaseapp.com",
+    projectId: "fantasy-premier-leagues",
+    storageBucket: "fantasy-premier-leagues.appspot.com",
+    messagingSenderId: "218771015521",
+    appId: "1:218771015521:web:90f41e75b72a6a2ad0a720",
+    measurementId: "G-FXY6ZE2SNF"
+  },
   production: false
 };
 
