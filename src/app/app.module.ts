@@ -9,12 +9,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FlexModule } from '@angular/flex-layout';
+import { RoomComponent } from './room/room.component';
+import { QRCodeModule } from 'angularx-qrcode';
+import { CreateRoomComponent } from './create-room/create-room.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    RoomComponent,
+    CreateRoomComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +29,10 @@ import { FlexModule } from '@angular/flex-layout';
     MatIconModule,
     MatCardModule,
     FlexModule,
-    MatButtonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    MatButtonModule,
+    QRCodeModule
+    ],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
