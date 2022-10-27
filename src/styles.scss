@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//main - #4B0082
+//sub-theme - #DDA0DD
+:root {
+  --primary: pink;
+  --black: 0 0 0;
+  font-family: 'Barlow', sans-serif !important;
+font-family: 'Kanit', sans-serif;
+font-family: 'Mulish', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Sulphur Point', sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
