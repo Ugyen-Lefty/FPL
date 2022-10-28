@@ -12,6 +12,7 @@ import { FlexModule } from '@angular/flex-layout';
 import { RoomComponent } from './room/room.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { CreateRoomComponent } from './create-room/create-room.component';
+import { JoinRoomComponent } from './join-room/join-room.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CreateRoomComponent } from './create-room/create-room.component';
     NavbarComponent,
     HomeComponent,
     RoomComponent,
-    CreateRoomComponent
+    CreateRoomComponent,
+    JoinRoomComponent
   ],
   imports: [
     BrowserModule,

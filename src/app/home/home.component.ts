@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
     this.route.navigateByUrl('create-room/1');
   }
 
+  joinRoom() {
+    this.route.navigateByUrl('join-room');
+  }
+
 }

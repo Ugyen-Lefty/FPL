@@ -1,3 +1,4 @@
+import { JoinRoomComponent } from './join-room/join-room.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'create-room/:room-id/space',
     component: RoomComponent
+  },
+  {
+    path: 'join-room',
+    component: JoinRoomComponent
   }
   // { path: 'search/:query', component: FilteredVideosComponent },
   // { path: '', redirectTo: 'home', pathMatch: 'full' }
