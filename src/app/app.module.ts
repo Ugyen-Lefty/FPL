@@ -33,7 +33,7 @@ import { JoinRoomComponent } from './join-room/join-room.component';
     FlexModule,
     MatButtonModule,
     QRCodeModule
-    ],
+      ],
   bootstrap: [AppComponent],
 
 })
