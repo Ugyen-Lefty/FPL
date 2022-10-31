@@ -2,7 +2,7 @@ footer {
   position: fixed;
   bottom: 0%;
   width: calc(100vw - 30px);
-  background: rgba(34, 40, 49, 0.5);
+  background-color: #131313;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.9px);
@@ -22,4 +22,12 @@ i {
 .grid-item {
   font-size: 20px;
   text-align: center;
+}
+
+.active-link {
+  i {
+    color: #2857cb;
+  }
+  color: #2857cb;
+  font-weight: bold;
 }

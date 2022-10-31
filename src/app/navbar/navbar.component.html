@@ -1,31 +1,36 @@
 <footer class="text-center">
-  <div class="container p-4">
+  <div class="px-[16px] py-[12px]">
     <section>
-      <div class="grid-container" fxLayout="row" fxLayoutAlign="space-evenly center">
+      <div class="grid-container" fxLayout="row" fxLayoutAlign="space-between center">
         <div>
-          <a class="grid-item" style="font-size: 25px;" routerLink="/create-room/1/space" role="button">
-            <i class="fas fa-house-chimney"></i>
+          <a class="grid-item" routerLink="/create-room/1/space" role="button" routerLinkActive="active-link">
+            <i class="fas fa-house-chimney text-[20px]"></i>
+            <p class="text-[13px] mb-0">Home</p>
           </a>
         </div>
         <div>
-          <a class="grid-item" routerLink="/" role="button" style="font-size: 25px;">
-            <i class="fa-solid fa-eur"></i>
+          <a class="grid-item" routerLink="/test" role="button" routerLinkActive="active-link">
+            <i class="fa-solid fa-eur text-[20px]"></i>
+            <p class="text-[13px] mb-0">Sponsor</p>
           </a>
         </div>
         <div>
-          <a class="grid-item" routerLink="/search" role="button"
-            style="font-size: 45px; background-color: #00ffff; border-radius: 100px; width: 60px; margin: auto;">
-            <i class="fa-solid fa-trophy"></i>
+          <a class="grid-item" routerLink="/search" role="button">
+            <div class="flex justify-center items-center" style="height: 60px; width: 60px; background-color: #2857cb; border-radius: 100px; margin: auto; clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);">
+              <i class="fa-solid fa-trophy text-[25px]"></i>
+            </div>
           </a>
         </div>
         <div>
-          <a class="grid-item" routerLink="/search" style="font-size: 25px;" role="button">
-            <i class="fa-solid fa-users"></i>
+          <a class="grid-item" routerLink="/search" role="button" routerLinkActive="active-link">
+            <i class="fa-solid fa-users text-[20px]"></i>
+            <p class="text-[13px] mb-0">Staff</p>
           </a>
         </div>
         <div>
-          <a class="grid-item" routerLink="/search" style="font-size: 25px;" role="button">
-            <i class="fa-solid fa-duotone fa-futbol"></i>
+          <a class="grid-item" routerLink="/search" role="button" routerLinkActive="active-link">
+            <i class="fa-solid fa-duotone fa-futbol text-[20px]"></i>
+            <p class="text-[13px] mb-0">Stadium</p>
           </a>
         </div>
 

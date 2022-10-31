@@ -10,8 +10,8 @@ import Swal from 'sweetalert2';
 export class RoomComponent implements OnInit {
 
   teamName: any;
-  isLoading = true;
-
+  isLoading = false;
+  
   constructor(private route: Router) { }
 
   ngOnInit(): void {
