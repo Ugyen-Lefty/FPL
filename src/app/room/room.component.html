@@ -1,9 +1,9 @@
-<div *ngIf="isLoading" class="home">
+<div *ngIf="isLoading" class="home" style="height: 100vh; background-color: #222831;">
 </div>
-<div *ngIf="!isLoading" class="home" style="background-color: #16171d;">
+<div *ngIf="!isLoading" class="home" style="background-color: #222831;">
   <div fxLayout="column">
     <div fxLayout="row" fxLayoutAlign="space-between start" class="p-[10px]">
-      <div fxLayout="column" fxLayoutGap="2px">
+      <div fxLayout="column" fxLayoutGap="2px" style="color: #eeeeee;">
         <h1>Hi {{ teamName }}</h1>
         <p>Welcome Back !</p>
       </div>
@@ -32,7 +32,7 @@
       </div>
       </div>
       <div style="margin: 20px;">
-      <div class="card !h-[unset] !px-[20px] !py-[20px]" fxLayout="column" fxLayoutGap="10px" style="background-color: #2857cb; margin-top: 10px; margin-bottom: 10px;">
+      <div class="card !h-[unset] !px-[20px] !py-[20px]" fxLayout="column" fxLayoutGap="10px" style="background-color: #00ADB5; margin-top: 10px; margin-bottom: 10px;">
        <h3>Player List</h3>
        <div fxLayout="row"  fxLayoutGap="30px" fxLayoutAlign="space-between center" class="overflow-x-auto hide-scroll">
        <div fxLayout="column" fxLayoutAlign="center center">
@@ -81,7 +81,7 @@
        <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="space-around center">
       <div class="player-card bg-cover"
         style="background-image: url('https://nwscdn.com/media/wysiwyg/3kf/football/Football-Clipboard-and-Marker-Pen-with-Eraser.jpg');">
-        <div fxLayout="column" fxLayoutGap="15px" class="h-full backdrop-brightness-50 rounded-[10px]">
+        <div fxLayout="column" fxLayoutGap="15px" class="h-full backdrop-brightness-50 rounded-[10px] justify-content-center">
           <!-- <p class="live1">Live</p> -->
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
           <!-- <div style="background-color: red; border-radius: 50%; height: 50px; width: 50px;"></div>
@@ -106,7 +106,7 @@
       </div>
       <div class="player-card bg-cover"
         style="background-image: url('https://wps3.dbknews.com/uploads/2019/10/10-21_UmdMSocceryale_RM-24.jpg');">
-        <div fxLayout="column" fxLayoutGap="15px" class="h-full backdrop-brightness-50 rounded-[10px]">
+        <div fxLayout="column" fxLayoutGap="15px" class="h-full backdrop-brightness-50 rounded-[10px] justify-content-center">
           <!-- <p class="live1">Live</p> -->
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
           <!-- <div style="background-color: red; border-radius: 50%; height: 50px; width: 50px;"></div>
@@ -132,7 +132,7 @@
       <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="space-around center">
         <div class="player-card bg-cover"
         style="background-image: url('https://cdn.pixabay.com/photo/2016/05/24/07/01/champions-1411861_960_720.jpg');">
-        <div fxLayout="column" fxLayoutGap="15px" class="h-full backdrop-brightness-50 rounded-[10px]">
+        <div fxLayout="column" fxLayoutGap="15px" class="h-full backdrop-brightness-50 rounded-[10px] justify-content-center">
           <!-- <p class="live1">Live</p> -->
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
           <!-- <div style="background-color: red; border-radius: 50%; height: 50px; width: 50px;"></div>
@@ -161,7 +161,7 @@
       </div>
       <div class="player-card bg-cover"
         style="background-image: url('https://www.aljazeera.com/wp-content/uploads/2021/12/7R206927.jpg?resize=1800%2C1800');">
-        <div fxLayout="column" fxLayoutGap="15px" class="h-full backdrop-brightness-50 rounded-[10px]">
+        <div fxLayout="column" fxLayoutGap="15px" class="h-full backdrop-brightness-50 rounded-[10px] justify-content-center">
           <!-- <p class="live1">Live</p> -->
         <div fxLayout="row" fxLayoutAlign="space-evenly center">
           <!-- <div style="background-color: red; border-radius: 50%; height: 50px; width: 50px;"></div>
