@@ -1,6 +1,7 @@
 <div *ngIf="isLoading" class="home" style="height: 100vh; background-color: #222831;">
 </div>
-<div *ngIf="!isLoading" class="home" style="background-color: #222831;">
+<div style="width: 100%">
+ <div *ngIf="!isLoading" class="home" style="background-color: #222831;">
   <div fxLayout="column">
     <app-header [header]="'Hi ' + teamName" [message]="'Welcome Back !'" [stats]="userStats"></app-header>
     <div style="margin: 20px;">
@@ -170,3 +171,5 @@
   </div>
 </div>
 <app-navbar></app-navbar>
+</div>
+
