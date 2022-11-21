@@ -1,5 +1,5 @@
-<div style="height: 100%;">
-  <ng-container *ngIf="isLoading">
+<div style="height: 100%; background-color: #222831;">
+  <ng-container *ngIf="false">
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
@@ -9,13 +9,74 @@
           To Claim a sponsor, simply open your phone camera and scan the QR code from the sponsor Card
         </div>
       </div>
-
     </div>
 
   </ng-container>
-  <ng-container *ngIf="!isLoading">
-    <app-header [header]="'Sponsors'" [stats]="userStats"></app-header>
-    <div style="background-color: #222831; height: 100%; color: white;">History</div>
+  <ng-container *ngIf="true">
+  <div class="sponsor">
+     <app-header [header]="'Sponsors'" [stats]="userStats"></app-header>
+  <div fxLayout="column">
+ <div fxLayout="row" fxLayoutAlign="center center">
+    <h1 class="sponsor-header">HISTORY</h1>
+ </div>
+</div>
+  </div>
+  <div fxLayout="column" fxLayoutGap="20px" style="color: white; margin-top: 20px" *ngFor="let i of data">
+    <div fxLayout="row" fxLayoutAlign="space-between center" style="padding: 0 100px 0 100px">
+     <div>Sponsors card</div>
+     <div>{{i}}</div>
+    </div>
+  </div>
+<div style="margin: 20px;">
+      <div class="card !h-[unset] !px-[20px] !py-[20px]" fxLayout="column" fxLayoutGap="10px"
+        style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0">
+        <h3>Other Players (Claimed)</h3>
+        <div fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="space-between center" class="overflow-x-auto hide-scroll">
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/check.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team A</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/check.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team B</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/check.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team C</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/cross.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team D</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/cross.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team E</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/cross.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team F</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </ng-container>
 </div>
 <app-navbar></app-navbar>

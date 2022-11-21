@@ -13,6 +13,7 @@ export class SponsorsComponent implements OnInit {
   userStats: any;
   money: any;
   isLoading = true;
+  data: string[] = ['8', '10'];
 
   constructor(private route: ActivatedRoute, private api: ApiService) { }
 
@@ -31,6 +32,7 @@ export class SponsorsComponent implements OnInit {
         showConfirmButton: false,
         icon: "success",
       });
+      // this.data.push('8');
     }
   }
 
