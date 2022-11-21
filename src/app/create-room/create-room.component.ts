@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-room.component.scss']
 })
 export class CreateRoomComponent implements OnInit {
-  data = window.location.href + '/space';
-  // data = window.location.href + '/sponsor?data=' + JSON.stringify(this.sponsor);
+  // data = window.location.href + '/space';
+  data = window.location.origin + '/sponsor?data=' + JSON.stringify({
+    money: 8
+  });
 
   constructor(private router: Router) { }
 

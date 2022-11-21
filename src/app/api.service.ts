@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collectionData, collection, addDoc, updateDoc, doc } from '@angular/fire/firestore';
+import { Firestore, collectionData, collection, addDoc, updateDoc, doc, docData } from '@angular/fire/firestore';
 
 
 @Injectable({
@@ -14,20 +14,33 @@ export class ApiService {
   }
 
   getUsers() {
+    // this.userCollection = collectionData(users);
     const users = collection(this.fire, 'users');
-    this.userCollection = collectionData(users);
-    return this.userCollection;
+    return collectionData(users, {
+      idField: 'id',
+    });
+  }
+
+  getById(id: string) {
+    const ref = doc(this.fire, `users/${id}`);
+    return docData(ref, { idField: 'id' });
   }
 
   newUser(data: any) {
     return addDoc(collection(this.fire, "users"), data);
   }
 
-  updateUserMoney(id: any, data: any) {
-    const userRef = doc(this.fire, "users", id);
-    updateDoc(userRef, {
-      money: data
-    });
+  // updateUserMoney(id: any, data: any) {
+  //   const userRef = doc(this.fire, "users", id);
+  //   updateDoc(userRef, {
+  //     money: data
+  //   });
+  // }
+
+  updateUserMoney(data: any, id: any) {
+    const userRef = doc(this.fire, `users/${id}`);
+    // return updateDoc(userRef, { ...data });
+    return updateDoc(userRef, { money: 28 });
   }
 
 }

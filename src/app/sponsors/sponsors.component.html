@@ -13,8 +13,9 @@
     </div>
 
   </ng-container>
-  <ng-container *ngIf="!isLoading" style="background-color: #222831; height: 100%;">
-    <div style="color: white;">History</div>
+  <ng-container *ngIf="!isLoading">
+    <app-header [header]="'Sponsors'" [stats]="userStats"></app-header>
+    <div style="background-color: #222831; height: 100%; color: white;">History</div>
   </ng-container>
 </div>
 <app-navbar></app-navbar>

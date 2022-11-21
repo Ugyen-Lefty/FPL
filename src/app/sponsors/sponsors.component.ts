@@ -1,3 +1,4 @@
+import { ApiService } from './../api.service';
 import Swal from 'sweetalert2';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -10,22 +11,26 @@ import { ActivatedRoute } from '@angular/router';
 export class SponsorsComponent implements OnInit {
 
   userStats: any;
+  money: any;
   isLoading = true;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit(): void {
-    if (this.route.snapshot.params) {
+    this.api.getById('9gOXciTrKZgmLyATFYgG').subscribe(res => {
+      this.userStats = res;
+    });
+    if (this.route.snapshot.queryParams['data']) {
       this.isLoading = false;
-      this.userStats = JSON.parse(this.route.snapshot.queryParams['data']);
-      // JSON.parse(this.userStats);
-      // Swal.fire({
-      //   title: `You have claimed ${this.userStats}!`,
-      //   timer: 2000,
-      //   toast: true,
-      //   showConfirmButton: false,
-      //   icon: "success",
-      // });
+      this.money = JSON.parse(this.route.snapshot.queryParams['data'] || '');
+      this.api.updateUserMoney(this.money, '9gOXciTrKZgmLyATFYgG');
+      Swal.fire({
+        title: `You have claimed ${this.money['money']} Euros!`,
+        timer: 2000,
+        toast: true,
+        showConfirmButton: false,
+        icon: "success",
+      });
     }
   }
 

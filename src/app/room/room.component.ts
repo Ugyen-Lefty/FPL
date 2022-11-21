@@ -13,6 +13,7 @@ export class RoomComponent implements OnInit {
   teamName: any;
   currentUser: any;
   isLoading = true;
+  userStats: any;
 
   constructor(private route: Router, private api: ApiService) { }
 
@@ -35,6 +36,7 @@ export class RoomComponent implements OnInit {
           money: 20,
           fans: 3,
           fitness: 3,
+          wins: 0
           // staff: 
         });
         localStorage.setItem('user_name', res.value);
@@ -52,5 +54,8 @@ export class RoomComponent implements OnInit {
       this.teamName = localStorage['user_name'];
       this.isLoading = false;
     }
+    this.api.getById('9gOXciTrKZgmLyATFYgG').subscribe(res => {
+      this.userStats = res;
+    });
   }
 }
