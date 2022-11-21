@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { HomeComponent } from './home/home.component';
 import { RoomComponent } from './room/room.component';
+import { SponsorComponent } from './sponsor/sponsor.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'join-room',
     component: JoinRoomComponent
+  },
+   {
+    path: 'sponsor',
+    component: SponsorComponent
   }
   // { path: 'search/:query', component: FilteredVideosComponent },
   // { path: '', redirectTo: 'home', pathMatch: 'full' }

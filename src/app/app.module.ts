@@ -13,6 +13,7 @@ import { RoomComponent } from './room/room.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { JoinRoomComponent } from './join-room/join-room.component';
+import { SponsorComponent } from './sponsor/sponsor.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { JoinRoomComponent } from './join-room/join-room.component';
     HomeComponent,
     RoomComponent,
     CreateRoomComponent,
-    JoinRoomComponent
+    JoinRoomComponent,
+    SponsorComponent
   ],
   imports: [
     BrowserModule,
