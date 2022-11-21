@@ -13,6 +13,11 @@ import { RoomComponent } from './room/room.component';
 import { QRCodeModule } from 'angularx-qrcode';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { JoinRoomComponent } from './join-room/join-room.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,8 @@ import { JoinRoomComponent } from './join-room/join-room.component';
     HomeComponent,
     RoomComponent,
     CreateRoomComponent,
-    JoinRoomComponent
+    JoinRoomComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,10 @@ import { JoinRoomComponent } from './join-room/join-room.component';
     MatCardModule,
     FlexModule,
     MatButtonModule,
-    QRCodeModule
+    QRCodeModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore())
       ],
   bootstrap: [AppComponent],
 

@@ -1,0 +1,20 @@
+<div style="height: 100%;">
+  <ng-container *ngIf="isLoading">
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="home" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+        <div class="glass">
+          To Claim a sponsor, simply open your phone camera and scan the QR code from the sponsor Card
+        </div>
+      </div>
+
+    </div>
+
+  </ng-container>
+  <ng-container *ngIf="!isLoading" style="background-color: #222831; height: 100%;">
+    <div style="color: white;">History</div>
+  </ng-container>
+</div>
+<app-navbar></app-navbar>

@@ -1,3 +1,4 @@
+import { SponsorsComponent } from './sponsors/sponsors.component';
 import { JoinRoomComponent } from './join-room/join-room.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -22,7 +23,11 @@ const routes: Routes = [
   {
     path: 'join-room',
     component: JoinRoomComponent
-  }
+  },
+  {
+    path: 'sponsor',
+    component: SponsorsComponent
+  },
   // { path: 'search/:query', component: FilteredVideosComponent },
   // { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

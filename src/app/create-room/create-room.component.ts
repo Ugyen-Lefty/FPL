@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-room.component.scss']
 })
 export class CreateRoomComponent implements OnInit {
-
   data = window.location.href + '/space';
+  // data = window.location.href + '/sponsor?data=' + JSON.stringify(this.sponsor);
 
   constructor(private router: Router) { }
 

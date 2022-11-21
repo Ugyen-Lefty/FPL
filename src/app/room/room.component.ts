@@ -1,3 +1,4 @@
+import { ApiService } from './../api.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
@@ -10,30 +11,46 @@ import Swal from 'sweetalert2';
 export class RoomComponent implements OnInit {
 
   teamName: any;
+  currentUser: any;
   isLoading = true;
-  
-  constructor(private route: Router) { }
+
+  constructor(private route: Router, private api: ApiService) { }
 
   ngOnInit(): void {
-    Swal.fire({
-      title: 'Please Enter a Team Name',
-      input: 'text',
-      showConfirmButton: true,
-      icon: "question",
-      backdrop:
-        `
-        rgba(0,0,0,0.7)
-      `
-    }).then((res) => {
-      this.teamName = res.value;
-      this.isLoading = false
+    this.currentUser = localStorage['user_name'] || '';
+    if (!this.currentUser) {
       Swal.fire({
-        title: `Welcome to the Game ${this.teamName}!`,
-        timer: 2000,
-        toast: true,
-        showConfirmButton: false,
-        icon: "success",
+        title: 'Please Enter a Team Name',
+        input: 'text',
+        showConfirmButton: true,
+        icon: "question",
+        backdrop:
+          `
+          rgba(0,0,0,0.7)
+        `
+      }).then((res) => {
+        this.teamName = res.value;
+        this.api.newUser({
+          name: res.value,
+          money: 20,
+          fans: 3,
+          fitness: 3,
+          // staff: 
+        });
+        localStorage.setItem('user_name', res.value);
+
+        this.isLoading = false
+        Swal.fire({
+          title: `Welcome to the Game ${this.teamName}!`,
+          timer: 2000,
+          toast: true,
+          showConfirmButton: false,
+          icon: "success",
+        });
       });
-    });
+    } else {
+      this.teamName = localStorage['user_name'];
+      this.isLoading = false;
+    }
   }
 }
