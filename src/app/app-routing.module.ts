@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CreateRoomComponent } from './create-room/create-room.component';
 import { HomeComponent } from './home/home.component';
 import { RoomComponent } from './room/room.component';
+import { StaffComponent } from './staff/staff.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'sponsor',
     component: SponsorsComponent
+  },
+  {
+    path: 'staff',
+    component: StaffComponent
   },
   // { path: 'search/:query', component: FilteredVideosComponent },
   // { path: '', redirectTo: 'home', pathMatch: 'full' }
