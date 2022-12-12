@@ -22,6 +22,10 @@ import { HeaderComponent } from './header/header.component';
 import { StaffComponent } from './staff/staff.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     JoinRoomComponent,
     SponsorsComponent,
     HeaderComponent,
-    StaffComponent
+    StaffComponent,
+    PlayerDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -49,8 +54,11 @@ import { HttpClientModule } from '@angular/common/http';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-    MatTabsModule
-      ],
+    MatTabsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule
+  ],
   bootstrap: [AppComponent],
 
 })

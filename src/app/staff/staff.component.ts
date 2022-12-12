@@ -1,6 +1,8 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { MatDialog } from '@angular/material/dialog';
+import { PlayerDetailComponent } from '../player-detail/player-detail.component';
 
 @Component({
   selector: 'app-staff',
@@ -39,85 +41,175 @@ export class StaffComponent implements OnInit {
   main = [
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     },
     {
       name: 'player',
-      skill: 1
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
     }
   ];
 
-  subs = [{
-    name: 'player',
-    skill: 1
-  },
-  {
-    name: 'player',
-    skill: 1
-  },
-  {
-    name: 'player',
-    skill: 1
-  },
-  {
-    name: 'player',
-    skill: 1
-  },
-  {
-    name: 'player',
-    skill: 1
-  },
-  {
-    name: 'player',
-    skill: 1
-  }];
-
-  userStats: any;
-  index: any;
-
-  constructor(private api: ApiService, private route: ActivatedRoute) { }
+    subs = [{
+      name: 'player',
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
+    },
+    {
+      name: 'player',
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
+    },
+    {
+      name: 'player',
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
+    },
+    {
+      name: 'player',
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
+    },
+    {
+      name: 'player',
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
+    },
+    {
+      name: 'player',
+      skill: 1,
+      goal: 2,
+   assist: 2,
+   minutes_played: 1260,
+   yellow_card: 3,
+   red_card: 2
+    }];
+    userStats: any;
+    index: any;
+  constructor( private api: ApiService, private dialog: MatDialog, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.index = this.route.snapshot.queryParams['index'];
     this.api.getById('9gOXciTrKZgmLyATFYgG').subscribe(res => {
       this.userStats = res;
     });
+  }
+
+  openDetails(player: any) {
+    this.dialog.open(PlayerDetailComponent, {
+      width: '80%',
+      data: player,
+    })
   }
 
 }

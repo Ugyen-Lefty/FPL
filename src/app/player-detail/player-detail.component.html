@@ -1,0 +1,43 @@
+<div class="player">
+<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<h3>Player Information</h3>
+<div mat-dialog-content>
+ <div fxLayout="column">
+   <div fxLayout="row" fxLayoutGap="20px">
+            <i class="fa-solid fa-duotone fa-futbol text-[35px]" style="color: #00adb5;"></i>
+      <div fxLayout="column" fxLayoutGap="4px">
+        <h5>Goals</h5>
+         <p>{{data.goal}}</p>
+      </div>
+   </div>
+    <div fxLayout="row" fxLayoutGap="20px">
+            <i class="fas fa-handshake text-[35px]" style="color: #00adb5;"></i>
+      <div fxLayout="column" fxLayoutGap="2px">
+        <h6>Assistes</h6>
+         <p>{{data.assist}}</p>
+      </div>
+   </div>
+    <div fxLayout="row" fxLayoutGap="20px">
+      <i class="fas fa-clock text-[35px]" style="color: #00adb5;"></i>
+      <div fxLayout="column" fxLayoutGap="2px">
+        <h6>Minutes Played</h6>
+         <p>{{data.minutes_played}}</p>
+      </div>
+   </div>
+    <div fxLayout="row" fxLayoutGap="20px">
+            <i class="fas fa-square text-[35px]" style="color: yellow;"></i>
+      <div fxLayout="column" fxLayoutGap="2px">
+        <h6>Yellow Cards</h6>
+         <p>{{data.yellow_card}}</p>
+      </div>
+   </div>
+    <div fxLayout="row" fxLayoutGap="20px">
+            <i class="fas fa-square text-[35px]" style="color: red;"></i>
+      <div fxLayout="column" fxLayoutGap="2px">
+        <h6>Red Card</h6>
+         <p>{{data.red_card}}</p>
+      </div>
+   </div>
+ </div>
+</div>
+</div>

@@ -15,7 +15,7 @@
         <h3>{{staff.title}}</h3>
         <p>{{staff.description}}</p>
         <hr>
-        <h6>POINTS - {{staff.points}}</h6>
+        <h6>PRICE - {{staff.points}}</h6>
       </div>
       </div>
    </div>
@@ -71,9 +71,9 @@
     </div>
   </mat-tab>
   <mat-tab label="Squads">
-   <div fxLayout="column" >
+   <div fxLayout="column">
    <h2>Main LineUp</h2>
-    <div *ngFor="let player of main">
+    <div *ngFor="let player of main" (click)="openDetails(player)">
     <div fxLayout="row" fxLayoutAlign="space-between center" style="margin: 10px">
       <p>{{player.name}}</p>
      <p>{{player.skill}}</p>
