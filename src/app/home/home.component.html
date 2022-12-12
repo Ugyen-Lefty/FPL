@@ -10,25 +10,55 @@
       <h1>FANTASY LEAGUE</h1>
       <p>Welcome to fantasy league</p>
     </div>
-     <div fxLayout="row" class="button" fxLayoutAlign="center center">
-      <button mat-button (click)="createRoom()" >Create a room</button>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"/>
-          <path d="M8 12h8"/>
-          <path d="M12 16V8"/>
-        </svg>
+    <div *ngIf="!currentUser">
+      <div fxLayout="row" class="button" fxLayoutAlign="center center">
+        <button mat-button (click)="createRoom()">Create a room</button>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
+            <path d="M8 12h8" />
+            <path d="M12 16V8" />
+          </svg>
+        </div>
+      </div>
+      <div fxLayout="row" class="button" fxLayoutAlign="center center">
+        <button mat-button (click)="joinRoom()">Join a room</button>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+            <path d="M20 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1Z" />
+            <path
+              d="M14.28 4H9.72a1 1 0 0 0-.948.684l-.333 1A1 1 0 0 0 9.387 7h5.226a1 1 0 0 0 .948-1.316l-.333-1A1 1 0 0 0 14.279 4Z" />
+          </svg>
+        </div>
       </div>
     </div>
-     <div fxLayout="row" class="button" fxLayoutAlign="center center">
-      <button mat-button  (click)="joinRoom()">Join a room</button>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-          <path d="M20 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1Z"/>
-          <path d="M14.28 4H9.72a1 1 0 0 0-.948.684l-.333 1A1 1 0 0 0 9.387 7h5.226a1 1 0 0 0 .948-1.316l-.333-1A1 1 0 0 0 14.279 4Z"/>
-        </svg>
+    <div *ngIf="!!currentUser">
+      <div fxLayout="row" class="button" fxLayoutAlign="center center">
+        <button mat-button (click)="createRoom()">Reconnect</button>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
+            <path d="M8 12h8" />
+            <path d="M12 16V8" />
+          </svg>
+        </div>
       </div>
-     </div>
+      <div fxLayout="row" class="button" fxLayoutAlign="center center">
+        <button mat-button (click)="joinRoom()">Quit Game</button>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+            <path d="M20 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1Z" />
+            <path
+              d="M14.28 4H9.72a1 1 0 0 0-.948.684l-.333 1A1 1 0 0 0 9.387 7h5.226a1 1 0 0 0 .948-1.316l-.333-1A1 1 0 0 0 14.279 4Z" />
+          </svg>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

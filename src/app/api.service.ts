@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Firestore, collectionData, collection, addDoc, updateDoc, doc, docData } from '@angular/fire/firestore';
 
@@ -7,10 +8,15 @@ import { Firestore, collectionData, collection, addDoc, updateDoc, doc, docData 
 })
 export class ApiService {
 
+  url = 'https://fantasy-football.fly.dev';
   userCollection: any;
 
-  constructor(private fire: Firestore) {
+  constructor(private fire: Firestore, private http: HttpClient) {
 
+  }
+
+  getCurrentUser() {
+    return this.http.get(`${this.url}/users/current_user`);
   }
 
   getUsers() {
