@@ -19,6 +19,8 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { HeaderComponent } from './header/header.component';
+import { StaffComponent } from './staff/staff.component';
+import { MatTabsModule } from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -30,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     CreateRoomComponent,
     JoinRoomComponent,
     SponsorsComponent,
-    HeaderComponent
+    HeaderComponent,
+    StaffComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    MatTabsModule
       ],
   bootstrap: [AppComponent],
 

@@ -1,6 +1,6 @@
 <div *ngIf="isLoading" class="home" style="height: 100vh; background-color: #222831;">
 </div>
-<div style="width: 100%">
+<div style="width: 100%;">
  <div *ngIf="!isLoading" class="home" style="background-color: #222831;">
   <div fxLayout="column">
     <app-header [header]="'Hi ' + teamName" [message]="'Welcome Back !'" [stats]="userStats"></app-header>
@@ -56,8 +56,8 @@
     </div>
 
 
-    <div fxLayout="column" class="p-[20px]" fxLayoutGap="20px">
-      <h3>Club Info</h3>
+    <div fxLayout="column" class="p-[20px]" fxLayoutGap="20px" style="margin-bottom: 120px">
+      <h3 style="color: white">Club Info</h3>
       <div fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="space-around center">
         <div class="player-card bg-cover"
           style="background-image: url('https://nwscdn.com/media/wysiwyg/3kf/football/Football-Clipboard-and-Marker-Pen-with-Eraser.jpg');">
@@ -67,9 +67,10 @@
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
               <!-- <div style="background-color: red; border-radius: 50%; height: 50px; width: 50px;"></div>
           <div style="background-color: green; border-radius: 50%; height: 50px; width: 50px;"></div> -->
-              <div>
+              <div style="color: white">
                 STAFF
               </div>
+
             </div>
             <div>
               <div fxLayout="row" fxLayoutAlign="space-around center">
@@ -93,7 +94,7 @@
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
               <!-- <div style="background-color: red; border-radius: 50%; height: 50px; width: 50px;"></div>
           <div style="background-color: green; border-radius: 50%; height: 50px; width: 50px;"></div> -->
-              <div>PLAYERS</div>
+              <div style="color: white">PLAYERS</div>
             </div>
             <div>
               <div fxLayout="row" fxLayoutAlign="space-around center">
@@ -120,7 +121,7 @@
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
               <!-- <div style="background-color: red; border-radius: 50%; height: 50px; width: 50px;"></div>
           <div style="background-color: green; border-radius: 50%; height: 50px; width: 50px;"></div> -->
-              <div>
+              <div style="color: white">
                 PERFORMANCE
               </div>
             </div>
@@ -150,7 +151,7 @@
             <div fxLayout="row" fxLayoutAlign="space-evenly center">
               <!-- <div style="background-color: red; border-radius: 50%; height: 50px; width: 50px;"></div>
           <div style="background-color: green; border-radius: 50%; height: 50px; width: 50px;"></div> -->
-              <div>STADIUM</div>
+              <div style="color: white">STADIUM</div>
             </div>
             <div>
               <div fxLayout="row" fxLayoutAlign="space-around center">

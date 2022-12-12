@@ -1,0 +1,97 @@
+<div style="height: 100vh; background-color: #222831 !important;">
+  <ng-container *ngIf="true">
+  <div class="sponsor">
+     <app-header [header]="'My Team'" [stats]="userStats"></app-header>
+  <div fxLayout="column">
+ <!-- <div fxLayout="row" fxLayoutAlign="center center">
+    <h1 class="sponsor-header"></h1>
+ </div> -->
+ <mat-tab-group style="margin-bottom: 120px;">
+  <mat-tab label="Staffs">
+   <div fxLayout="column" style="margin: 20px; border-radius: 5px" *ngFor="let staff of staffs">
+      <div fxLayout="row" fxLayoutGap="20px">
+      <img [src]="staff.image" height="auto" width="100px" style="border-radius: 5px; object-fit: cover">
+      <div fxLayout="column">
+        <h3>{{staff.title}}</h3>
+        <p>{{staff.description}}</p>
+        <hr>
+        <h6>POINTS - {{staff.points}}</h6>
+      </div>
+      </div>
+   </div>
+   <div style="margin: 20px;">
+      <div class="card !h-[unset] !px-[20px] !py-[20px]" fxLayout="column" fxLayoutGap="10px"
+        style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0">
+        <h3>Other Players (Claimed)</h3>
+        <div fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="space-between center" class="overflow-x-auto hide-scroll">
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/check.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team A</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/check.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team B</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/check.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team C</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/cross.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team D</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/cross.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team E</p>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <div style="height: 40px; width: 40px;">
+              <img src="./assets/images/cross.png"
+                style="border-radius: 100px;">
+            </div>
+            <p class="mb-0 whitespace-nowrap mt-2">Team F</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Squads">
+   <div fxLayout="column" >
+   <h2>Main LineUp</h2>
+    <div *ngFor="let player of main">
+    <div fxLayout="row" fxLayoutAlign="space-between center" style="margin: 10px">
+      <p>{{player.name}}</p>
+     <p>{{player.skill}}</p>
+    </div>
+     <hr>
+    </div>
+    <hr>
+    <h2>Substitutions</h2>
+    <div fxLayout="row" fxLayoutAlign="space-between center" *ngFor="let player of subs">
+     <p>{{player.name}}</p>
+     <p>{{player.skill}}</p>
+    </div>
+   </div>
+  </mat-tab>
+</mat-tab-group>
+</div>
+  </div>
+
+  </ng-container>
+</div>
+<app-navbar></app-navbar>
