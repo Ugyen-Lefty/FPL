@@ -15,7 +15,7 @@ export class RoomComponent implements OnInit {
   isLoading = true;
   userStats: any;
 
-  constructor(private route: Router, private api: ApiService) { }
+  constructor(public route: Router, private api: ApiService) { }
 
   ngOnInit(): void {
     this.currentUser = localStorage['user_name'] || '';

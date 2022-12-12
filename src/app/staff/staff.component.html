@@ -6,7 +6,7 @@
  <!-- <div fxLayout="row" fxLayoutAlign="center center">
     <h1 class="sponsor-header"></h1>
  </div> -->
- <mat-tab-group style="margin-bottom: 120px;">
+ <mat-tab-group style="margin-bottom: 120px;" [selectedIndex]="index">
   <mat-tab label="Staffs">
    <div fxLayout="column" style="margin: 20px; border-radius: 5px" *ngFor="let staff of staffs">
       <div fxLayout="row" fxLayoutGap="20px">
